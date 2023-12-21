@@ -1,8 +1,9 @@
 ### IndirectAccessAnalyser
-download environment
+compile and install clang && llvm
 ```shell
-sudo apt-get install llvm-10-dev libclang-10-dev
+bash install_llvm.sh
 ```
+
 
 Use cmake to build it, and then 
 ```shell

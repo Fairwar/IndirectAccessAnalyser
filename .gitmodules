@@ -1,0 +1,4 @@
+[submodule "submodules/src/llvm-project"]
+	path = submodules/src/llvm-project
+	url = git@github.com:llvm/llvm-project.git
+	branch = release/10.x

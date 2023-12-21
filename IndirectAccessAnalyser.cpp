@@ -13,7 +13,7 @@
 #include "clang/Frontend/FrontendActions.h"
 #include "clang/Tooling/CommonOptionsParser.h"
 #include "clang/Tooling/Tooling.h"
-#include "llvm-10/llvm/Support/raw_ostream.h"
+#include "llvm/Support/raw_ostream.h"
 #include <iostream>
 #include <map>
 #include <memory>

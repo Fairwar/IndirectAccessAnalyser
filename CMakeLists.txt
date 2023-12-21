@@ -13,15 +13,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 # 添加可执行文件
 add_executable(IndirectAccessAnalyser IndirectAccessAnalyser.cpp)
+target_compile_options(IndirectAccessAnalyser PRIVATE -fno-rtti)
 
-find_package(Clang REQUIRED)
+find_package(
+  Clang REQUIRED CONFIG
+  HINTS submodules/llvm-project
+)
+             
 include_directories(${CLANG_INCLUDE_DIRS})
 target_link_libraries(
-  IndirectAccessAnalyser 
-  ${CLANG_LIBRARIES}   
-  clangAST
-  clangBasic
-  clangFrontend
-  clangSerialization
+  IndirectAccessAnalyser
   clangTooling
 )
